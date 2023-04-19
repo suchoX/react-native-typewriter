@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React, { useEffect, useRef, useState } from 'react'
+import { Animated, StyleSheet, Text, View } from 'react-native'
 
 import { TypewriterProps } from './types'
 
@@ -30,6 +30,26 @@ const TypeWriter: React.FC<TypewriterProps> = ({
 }) => {
   const [stringIndex, setStringIndex] = useState(0)
   const [textIndex, setTextIndex] = useState(0)
+  const opacityValue = useRef(new Animated.Value(0)).current
+
+  useEffect(() => {
+    Animated.loop(
+      Animated.sequence([
+        Animated.timing(opacityValue, {
+          toValue: 1,
+          duration: 2,
+          useNativeDriver: true,
+        }),
+        Animated.delay(300),
+        Animated.timing(opacityValue, {
+          toValue: 0,
+          duration: 2,
+          useNativeDriver: true,
+        }),
+        Animated.delay(300),
+      ])
+    ).start()
+  }, [opacityValue])
 
   useEffect(() => {
     setTimeout(() => {
@@ -52,12 +72,15 @@ const TypeWriter: React.FC<TypewriterProps> = ({
       }
     }, speed)
   })
+
   return (
     <View style={styles.container}>
       <Text style={textStyle ? textStyle : styles.text}>
         {textArray[stringIndex].substring(0, textIndex)}
       </Text>
-      <Text style={cursorStyle ? cursorStyle : styles.cursor}>▎</Text>
+      <Animated.View style={{ opacity: opacityValue }}>
+        <Text style={cursorStyle ? cursorStyle : styles.cursor}>▎</Text>
+      </Animated.View>
     </View>
   )
 }

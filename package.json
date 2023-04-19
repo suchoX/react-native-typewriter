@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "homepage": "https://github.com/suchox/react-native-type-writer",
-  "main": "src/index.ts",
+  "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "author": "Suchandrim Sarkar <suchandrim.sarkar@gmail.com>",
   "license": "MIT",
