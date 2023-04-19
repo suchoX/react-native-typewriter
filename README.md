@@ -7,13 +7,13 @@ React Native text component with animated typewriter effect.
 # Installation
 
 ```bash
-yarn add react-native-type-writer
+yarn add @sucho/react-native-typewriter
 ```
 
 OR
 
 ```bash
-npm install --save react-native-type-writer
+npm install --save @sucho/react-native-typewriter
 ```
 
 # Usage
