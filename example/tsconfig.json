@@ -7,11 +7,11 @@
     "module": "CommonJS",
     "noEmit": true,
     "paths": {
-      "react-native-type-writer": ["../src"]
+      "@sucho/react-native-typewriter": ["../src"]
     },
     "skipLibCheck": true,
     "strict": true,
-    "target": "ESNext",
+    "target": "ESNext"
   },
   "include": ["src"]
 }

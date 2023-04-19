@@ -1,8 +1,8 @@
 # React Native Typewriter
 
-React-Native component of Animated Text with typewriter effect.
+React Native text component with animated typewriter effect.
 
-<p align="center"><img src="https://github.com/suchoX/react-native-type-writer/blob/main/assets/demo.gif"></p>
+<p align="center"><img src="https://github.com/suchoX/react-native-typewriter/blob/main/assets/demo.gif"></p>
 
 # Installation
 

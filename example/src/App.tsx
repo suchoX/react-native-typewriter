@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import TypeWriter from 'react-native-type-writer'
+import TypeWriter from '@sucho/react-native-typewriter'
 
 const BACKGROUND = '#263238'
 const WHITE = '#ffffff'

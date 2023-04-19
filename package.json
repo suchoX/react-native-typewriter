@@ -1,8 +1,8 @@
 {
-  "name": "react-native-type-writer",
+  "name": "@sucho/react-native-typewriter",
   "version": "1.0.0",
-  "description": "",
-  "homepage": "https://github.com/suchox/react-native-type-writer",
+  "description": "React Native text component with animated typewriter effect",
+  "homepage": "https://github.com/suchoX/react-native-typewriter",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "author": "Suchandrim Sarkar <suchandrim.sarkar@gmail.com>",
