@@ -2,6 +2,8 @@
 
 React-Native component of Animated Text with typewriter effect.
 
+<p align="center"><img src="https://github.com/suchoX/react-native-type-writer/blob/main/assets/demo.gif"></p>
+
 # Installation
 
 ```bash
