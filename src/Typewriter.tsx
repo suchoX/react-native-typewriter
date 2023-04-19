@@ -8,7 +8,9 @@ const DEFAULT_DELAY = 40
 const WHITE = '#ffffff'
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    flexDirection: 'row',
+  },
   text: {
     color: WHITE,
     fontSize: 18,
@@ -19,7 +21,7 @@ const styles = StyleSheet.create({
   },
 })
 const TypeWriter: React.FC<TypewriterProps> = ({
-  text,
+  textArray,
   speed = DEFAULT_SPEED,
   loop = false,
   delay = DEFAULT_DELAY,
@@ -31,10 +33,10 @@ const TypeWriter: React.FC<TypewriterProps> = ({
 
   useEffect(() => {
     setTimeout(() => {
-      if (textIndex < text[stringIndex].length) {
+      if (textIndex < textArray[stringIndex].length) {
         setTextIndex(textIndex + 1)
       } else {
-        if (stringIndex < text.length - 1) {
+        if (stringIndex < textArray.length - 1) {
           setTimeout(() => {
             setTextIndex(0)
             setStringIndex(stringIndex + 1)
@@ -52,7 +54,9 @@ const TypeWriter: React.FC<TypewriterProps> = ({
   })
   return (
     <View style={styles.container}>
-      <Text style={textStyle ? textStyle : styles.text}>{text}</Text>
+      <Text style={textStyle ? textStyle : styles.text}>
+        {textArray[stringIndex].substring(0, textIndex)}
+      </Text>
       <Text style={cursorStyle ? cursorStyle : styles.cursor}>▎</Text>
     </View>
   )
