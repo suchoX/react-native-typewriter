@@ -23,7 +23,7 @@ Add the `Typewriter` component to your app
 ```javascript
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
-import TypeWriter from 'react-native-type-writer'
+import TypeWriter from '@sucho/react-native-typewriter'
 
 const BACKGROUND = '#263238'
 const WHITE = '#ffffff'
